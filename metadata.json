@@ -1,0 +1,6 @@
+{
+  "name": "Aura Films & Photography",
+  "description": "Boutique wedding studio making candid photography and cinematic wedding films, told with light.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #fdfbf7;
+  --surface: #f6f0e7;
+  --text: #1c1814;
+  --muted: #786c5e;
+  --primary: #c46e58;
+  --primary-500: #b65c44;
+  --primary-600: #9c4f3a;
+  --primary-700: #7e402f;
+  --accent: #c9a46a;
+  --accent-300: #e8d0a5;
+  --accent-400: #dbbb84;
+  --accent-500: #c9a46a;
+  --accent-600: #b08d55;
+  --line: rgba(28, 24, 20, 0.12);
+
+  --font-heading: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-body: "Jost", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-label: "Jost", ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-label {
+  font-family: var(--font-label);
+}
+
+/* Animations */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes cue-drop {
+  0%, 100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.3;
+    transform: translateY(10px);
+  }
+}
+
+.animate-cue {
+  animation: cue-drop 2s ease-in-out infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f6f0e7;
+}
+::-webkit-scrollbar-thumb {
+  background: #c9a46a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b65c44;
+}
